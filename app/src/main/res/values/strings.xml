@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Coroutines Example</string>
+
+    <string name="fetch">Fetch</string>
+    <string name="start">Start</string>
+    <string name="clear">Clear</string>
+    <string name="cancel">Cancel</string>
+</resources>
