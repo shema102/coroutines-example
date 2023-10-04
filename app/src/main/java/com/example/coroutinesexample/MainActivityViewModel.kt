@@ -3,6 +3,7 @@ package com.example.coroutinesexample
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
@@ -83,7 +84,7 @@ class MainActivityViewModel : ViewModel() {
     }
 
     fun fetchData() {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             val asyncMillis = measureTimeMillis {
                 val result1 = async { doSomething() }
                 val result2 = async { doSomethingElse() }
